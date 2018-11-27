@@ -15,7 +15,7 @@ class agua_abonado extends fs_list_controller {
        $this->add_filter_select('Abonados', 'cuenta', 'Cuenta',$cuenta);
        $tarifa = $this->sql_distinct('agua_abonados', 'tarifa_completa');
        $this->add_filter_select('Abonados', 'tarifa_completa', 'Tarifa',$tarifa);
-       $this->add_search_columns('Abonados', ['apellidos','nombres']);
+       $this->add_search_columns('Abonados', ['apellidos','nombres','cedula']);
        $this->add_sort_option('Abonados', ['cuenta']);
        
        ///columnas a mostrar planillas
